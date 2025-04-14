@@ -27,11 +27,13 @@ class UserAdmin(BaseUserAdmin):
     search_fields = ("email", "name")
     filter_horizontal = ()
     list_per_page = 20
+
     def get_fieldsets(self, request, obj=None):
         """Return the fieldsets for the user change form."""
         if obj:
             return super().get_fieldsets(request, obj)
         return self.add_fieldsets
+
     def get_readonly_fields(self, request, obj=None):
         """Return the readonly fields for the user change form."""
         if obj:
