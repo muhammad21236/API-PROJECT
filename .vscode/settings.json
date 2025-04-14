@@ -4,9 +4,11 @@
     "devdb",
     "devuser",
     "DOCKERHUB",
+    "psycopg",
     "pycache",
     "PYTHONUNBUFFERED",
     "runserver",
+    "testpass",
     "venv"
   ]
 }
