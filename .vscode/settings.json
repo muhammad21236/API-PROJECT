@@ -1,9 +1,12 @@
 {
   "cSpell.words": [
     "adduser",
+    "authtoken",
+    "badpassword",
     "devdb",
     "devuser",
     "DOCKERHUB",
+    "goodpassword",
     "psycopg",
     "pycache",
     "PYTHONUNBUFFERED",
