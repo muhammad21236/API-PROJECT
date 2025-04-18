@@ -3,6 +3,7 @@
     "adduser",
     "authtoken",
     "badpassword",
+    "changeme",
     "devdb",
     "devuser",
     "DOCKERHUB",
@@ -11,6 +12,7 @@
     "pycache",
     "PYTHONUNBUFFERED",
     "runserver",
+    "sdist",
     "testpass",
     "venv"
   ]
