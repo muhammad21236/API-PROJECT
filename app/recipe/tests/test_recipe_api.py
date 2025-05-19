@@ -51,18 +51,13 @@ class PublicRecipeAPITests(APITestCase):
 
 
 class PrivateRecipeAPITests(APITestCase):
-    """Test the authorized user recipe API."""
-
     def setUp(self):
         self.client = APIClient()
+        # Remove duplicate user creation
         self.user = create_user(
-            email="user0@example.com",
-            password="test123",
+            email="user@example.com",
+            password="testpass123",
             name="Test User",
-        )
-        self.user = get_user_model().objects.create_user(
-            "user@example.com",
-            "testpass123",
         )
         self.client.force_authenticate(self.user)
 
