@@ -41,6 +41,9 @@ class UserAdmin(BaseUserAdmin):
         return []
 
 
-admin.site.register(models.User, UserAdmin)
+admin.site.register(
+    models.User,
+    UserAdmin
+)
 admin.site.register(models.Recipe)
 admin.site.register(models.Tag)

@@ -15,14 +15,15 @@ class RecipeSerializer(serializers.ModelSerializer):
             "description": {"required": False},
             "link": {"required": False},
         }
-
-
+        
+        
 class RecipeDetailSerializer(RecipeSerializer):
     """Serializer for recipe detail view."""
 
     class Meta(RecipeSerializer.Meta):
         fields = RecipeSerializer.Meta.fields + ("description", "link")
-
+        
+        
 class TagSerializer(serializers.ModelSerializer):
     """Serializer for tag objects."""
 
