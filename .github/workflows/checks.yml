@@ -14,13 +14,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Debug file structure
-        run: |
-          ls -la app/core/management/commands
-          docker compose run --rm app sh -c "ls -la /app/core/management/commands"
       - name: Test
-        run: |
-          docker compose build --no-cache  # Force fresh build
-          docker compose run --rm app sh -c "python manage.py wait_for_db && python manage.py test"
+        run: docker compose run --rm app sh -c "python manage.py wait_for_db && python manage.py test"
       - name: Lint
         run: docker compose run --rm app sh -c "flake8"
