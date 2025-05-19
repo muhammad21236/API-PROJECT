@@ -14,6 +14,10 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Debug file structure
+        run: |
+          ls -la app/core/management/commands
+          docker compose run --rm app sh -c "ls -la /app/core/management/commands"
       - name: Test
         run: |
           docker compose build --no-cache  # Force fresh build
