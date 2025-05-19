@@ -11,6 +11,7 @@ from recipe import views
 # Create a router and register our viewset with it.
 router = DefaultRouter()
 router.register("recipes", views.RecipeViewSet)
+router.register("tags", views.TagViewSet)
 
 app_name = "recipe"
 urlpatterns = [

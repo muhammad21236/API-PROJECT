@@ -10,6 +10,10 @@ from django.test import TestCase
 
 TAGS_URL = reverse("recipe:tag-list")
 
+# def default_url(tag_id):
+#     """Return URL for tag detail."""
+#     return reverse("recipe:tag-detail", args=[tag_id])
+
 
 def create_user(email="user@example.com", password="testpass123"):
     """Create and return a user with an email and password."""
@@ -62,4 +66,3 @@ class PrivateTagsAPITests(TestCase):
         self.assertEqual(len(res.data), 1)
         self.assertEqual(res.data[0]["name"], tag.name)
         self.assertEqual(res.data[0]["id"], tag.id)
-        
